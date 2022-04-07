@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Fontawesome -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootswatch Darkly Theme -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/darkly/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <title>JS Movies</title>
+  </head>
+  <body>
+    
+    <!-- Encabezado -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">JS MOVIES CRUD</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">
+              Home <span class="sr-only">(current)</span>
+            </a>
+          </li>
+        </ul>
+        <!-- filtro apra buscar -->
+        <div class="barrabuscar">
+        <label for="buscar"> Buscar Por Titutlo </label>
+        <input type="text" id="myInput" class="form-control ml-sm-2" placeholder="Encanto">
+        </div>
+        <div>
+          <div class=""></div>
+          <template datosPeli>
+              <div class = "">  <!--hacer que se vaya al index  //titul year-->
+              <div class=""></div>
+              <div class=""></div>
+            </div>
+          </template>
+
+        </div>
+
+      </div>
+    
+  </nav>
+ <!-- Barra donde añadiremos las peliculas -->
+    <main>
+      <div class="container pt-3">
+        <div class="alert alert-danger d-none" role="alert" id="alert">
+          A simple danger alert—check it out!
+        </div>
+
+        <div>
+          <form>
+            <!-- Apartado pelicula -->
+            <div class="row">
+              
+              <div class="col-sm-7 d-sm-flex align-items-center">
+                <label class="m-sm-0">Agregar Pelicula</label> 
+                <input
+                  type="text"
+                  id="title"
+                  class="form-control ml-sm-2"
+                  placeholder="Encanto"
+                  title="Type in a name"/>
+                  
+              </div>
+                             
+              <div
+                class="px-sm-2 col-sm-3 d-sm-flex align-items-center mt-2 mt-sm-0"
+              >
+
+              <!-- apartado plataforma-->
+                <label class="m-sm-0">Plataforma STREAM</label>
+                <input
+                  type="text"
+                  id="year"
+                  class="form-control ml-sm-2"
+                  placeholder="Disney+"
+                />
+              </div>
+              <!-- boton añadir -->
+              <div class="col-sm-2 d-sm-flex justify-content-end mt-4 mt-sm-0">
+                <button type="button" class="btn btn-info btn-block" id="add">
+                  Añadir Peli
+                </button>
+              </div>
+      
+            </div>
+          </form>
+        </div>
+
+        <!-- Formulario para editar las pelis -->
+        <div>
+          <div class="alert alert-danger d-none" role="alert" id="alert"></div>
+          <form class="container pt-3 d-none" id="formEditMovie">
+            <div class="row mt-3">
+              <div class="col-sm-4 d-sm-flex align-items-center">
+                <label class="m-sm-0">Cambiar Nombre de Peli</label>
+                <input
+                  type="text"
+                  id="titleEditMovie"
+                  class="form-control m-sm-2"
+                  placeholder="Cambiar a: Batman"
+                  
+                />
+              </div>
+                         
+              <div class="px-sm-2 col-sm-10 d-sm-flex align-items-center mt-2 mt-sm-0">
+                <label class="m-sm-0">Cambiar Plataforma</label>
+                <input
+                  type="text"
+                  id="yearEditMovie"
+                  class="form-control m-sm-2"
+                  placeholder="Cambiar a: HBO"
+                  
+                />
+              </div>
+              
+              
+              <div class="col-sm-2 justify-contend-end mt-2">
+                <button type="button" 
+                class="
+                btn btn-primary 
+                btn-block"
+                id="btnEditMovie"
+                >
+                  Modificar
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+            
+
+
+         <!-- Barra de inforamcion    -->
+          <div class="mt-5">
+          <table class="table table-striped" id="table">
+            <thead>
+              <tr>
+                <th scope="col">Pelicula</th>
+                <th scope="col">Plataforma</th>
+                <th scope="col">
+                  <div class="d-flex justify-content-center">¿Visto?</div>
+                </th>
+                <th scope="col">
+                  <div class="d-flex justify-content-center">Borrar</div>
+                </th>
+                <th scope="col">
+                   <div class="d-flex justify-content-center">Editar Info de Peli</div> 
+                   <!--<input type="text" id="editBtn" class="d-flex justify-content-center" placeholder="Edit Peli" >   -->              
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Content generated with JS -->
+            </tbody>
+          </table>
+        </div>
+       </div>
+
+
+      <!-- <button class="btn btn-primary mb-1"><i class="fa fa-edit" aria-hidden="true"></i></button> -->
+
+
+    <!-- Js custom index.js -->   
+    </main>
+   
+
+    <script src="/index.js" type="module" ></script>
+  </body>
+</html>
